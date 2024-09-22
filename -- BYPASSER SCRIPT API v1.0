@@ -1,0 +1,122 @@
+-- BYPASSER SCRIPT API v1.0
+
+local api = {}
+
+function api.getPlayers()
+return {"Player1", "Player2", "Player3"}
+end
+
+function api.getPlayerCharacter(player)
+return "Character"
+end
+
+function api.getCharacterModel(character)
+return "Model"
+end
+
+function api.getModelMesh(model)
+return "Mesh"
+end
+
+function api.getMeshVertices(mesh)
+return {{0, 0, 0}, {1, 0, 0}, {1, 1, 0}, {0, 1, 0}}
+end
+
+function api.teleportPlayer(player, x, y, z)
+print("Teleported ".. player.. " to ".. x.. ", ".. y.. ", ".. z)
+end
+
+function api.createExplosion(x, y, z)
+print("Created explosion at ".. x.. ", ".. y.. ", ".. z)
+end
+
+function api.sendMessage(player, message)
+print("Sent message to ".. player.. ": ".. message)
+end
+
+function api.Bypasser Gui()
+while true do
+wait()
+end
+end
+
+function api.bypasserJump()
+while true do
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
+wait()
+end
+end
+
+function api.bypasserWalkspeed()
+while true do
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+wait()
+end
+end
+
+function api.bypasserNoclip()
+while true do
+for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+if v:IsA("BasePart") then
+v.CanCollide = false
+end
+end
+wait()
+end
+end
+
+function api.bypasserFly()
+while true do
+game.Players.LocalPlayer.Character.Humanoid.Fly = true
+wait()
+end
+end
+
+function api.bypasserKillAura()
+while true do
+for i,v in pairs(game.Players:GetPlayers()) do
+if v ~= game.Players.LocalPlayer then
+v.Character.Humanoid.Health = 0
+end
+wait()
+end
+end
+
+function api.bypasserESP()
+while true do
+for i,v in pairs(game.Players:GetPlayers()) do
+if v ~= game.Players.LocalPlayer then
+v.Character.Humanoid_rootpart.BrickColor = BrickColor.new("Red")
+end
+wait()
+end
+end
+
+function api.bypasserSpeedHack()
+while true do
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 1000
+wait()
+end
+end
+
+function api.bypasserJumpPower()
+while true do
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 1000
+wait()
+end
+end
+
+function api.bypasserGravity()
+while true do
+local api = require(api)
+
+api.bypasserGui()
+api.bypasserJump()
+api.bypasserWalkspeed()
+api.bypasserNoclip()
+api.bypasserFly()
+api.bypasserKillAura()
+api.bypasserESP()
+api.bypasserSpeedHack()
+api.bypasserJumpPower()
+api.bypasserGravity()
